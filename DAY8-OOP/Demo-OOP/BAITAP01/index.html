@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Shape {
+            constructor(color) {
+                this.color = color;
+
+            }
+            isFiled() {
+                return true;
+            }
+            toString() {
+                console.log("this is shape");
+            }
+
+        }
+        class Circle extends Shape {
+            constructor(color, radius) {
+                super(color);
+                this.radius = radius;
+            }
+
+            getArea() {
+                return 2 * this.radius * Math.PI;
+            }
+
+            getPerimeter() {
+                return 2 * this.radius * Math.PI;
+            }
+
+            toString() {
+                console.log(`Circle color: ${this.color}, has Area: ${this.getArea()} , Perimeter: ${this.getPerimeter()}`);
+            }
+        }
+        let shape = new Circle("red", 4);
+        shape.toString();
+
+
+
+        class Rectangle extends Shape {
+            constructor(color, width, height) {
+                super(color);
+                this.width = width;
+                this.height = height;
+            }
+
+            getArea() {
+                return 2 * this.width * this.height * Math.PI;
+            }
+
+            getPerimeter() {
+                return 100* this.width * this.height * Math.PI;
+            }
+            toString() {
+                console.log(`Rectangle color: ${this.color}, has Area: ${this.getArea()} , Perimeter: ${this.getPerimeter()}`);
+            }
+
+        }
+
+        let chuvi = new Rectangle("red", 4,5);
+        chuvi.toString();
+    </script>
+</body>
+
+</html>

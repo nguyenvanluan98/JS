@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Employee {
+            constructor(id, lastName, salary, firstName) {
+                this.id = id
+                this.firstName = firstName
+                this.lastName = lastName
+                this.salary = salary
+
+            }
+
+
+            get_fullname() {
+                return this.firstName + this.lastName;
+            }
+
+            get_salary() {
+                return this.salary;
+            }
+            get_annual_salary() {
+                return this.salary() * 12
+            }
+            raise_salary(percent){
+                this.salary += this.salary *(percent/100);
+            }
+
+        }
+        class ParttimeEmployee extends Employee {
+            constructor(id, lastName, salary, firstName){
+                super(id, lastName, salary, firstName);
+                this.hour= hour;
+                this.arrOfHour = [];
+            }
+        }
+        let epm = new Employee('nguyen', 'luan');
+        console.log(epm.get_fullname());
+    </script>
+</body>
+
+</html>

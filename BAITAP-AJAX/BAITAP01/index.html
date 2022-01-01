@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Giphy</title>
+
+</head>
+
+<body>
+    <h1> GIFHY</h1>
+    <input type="text" name="input" id="input" placeholder="search">
+    <button onclick="requestData()">Search Gihpy</button>
+    <button onclick="remove()">Remove Gihpy</button>
+    <p id="list"></p>
+    <script>
+        let input = document.getElementById('input');
+        let list = document.getElementById('list');
+        function requestData() {
+            let inputValue = input.value;
+
+            var reques = $.ajax({
+                url: "http://api.giphy.com/v1/gifs/search",
+                method: "GET",
+                data: { q: 'inputValue', api_key: 'OaI8Scqh6gxKwYuB0TXRiZxeyTICIFcX' },
+                dataType: "json"
+            })
+            request.done(function (msg) {
+                let res = msg.data;
+               addGIF(res[0])
+                console.log(msg.data)
+            });
+
+
+            request.fail(function (jqXHR, textStatus) {
+                console.log("Request failed: " + textStatus);
+            });
+        }
+        function remove(){
+            document.getElementById('list').innerHTML=null;
+        }
+    </script>
+</body>
+
+</html>

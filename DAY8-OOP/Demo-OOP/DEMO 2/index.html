@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // lớp cha
+        class Animal{
+            constructor(name){
+                this.name=name;
+            }
+            say(){
+                console.log("I am an animal " + this.name);
+            }
+        }
+        // class con
+        class Omniover extends Animal{
+            // overide
+            say(name){
+                // console.log(name);
+                console.log(this.name);
+            }
+        }
+        //objects
+        let human = new Omniover("human");
+        human.say("Luân");
+
+        
+        let cat = new Omniover('cat');
+        cat.say();
+    </script>
+</body>
+</html>

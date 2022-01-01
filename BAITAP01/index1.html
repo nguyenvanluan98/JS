@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validate account</title>
+</head>
+<body>
+    <h1>Name</h1>
+    <form>
+        <label for="email">Enter your Name:</label>
+        <input type="text" id="textName" name="text">
+        <input type="submit" value="Check" onclick="checkName()">
+    </form>
+    <script>
+        function checkName() { 
+              let text = document.getElementById('textName'); 
+              let filter = /^[_a-z0-9]{6,}$/;
+              if (!filter.test(text.value)) { 
+                       alert('Tên Không hợp lệ');
+                       email.focus; 
+                       return false; 
+              }
+              else{ 
+                       alert('OK roi day!.'); 
+              } 
+          }
+      </script>
+        
+</body>
+</html>
