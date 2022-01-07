@@ -51,14 +51,14 @@ class App extends React.Component {
         this.setState({ isValid: value })
     }
 
-handleSubmit = () => {
+handleSubmit = (e) => {
     // const validation = this.checkValidForm()
     // if (validation.error) {
     //     alert(validation.msg)
     //   }else{
     //     alert('Submit form success')
     //   }
-
+    e.preventDefault()
     if (this.state.isValid) {
         this.setState({ isLoggedln: true })
         alert('Login success!!!')
@@ -76,7 +76,7 @@ render() {
     return (
         <div className="container d-flex align-items-center text-center">
             <div className="form-signin">
-                <form>
+                <form action="#">
                     <img className="mb-4" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/2560px-Bootstrap_logo.svg.png" alt="" width="72" height="57" />
                     <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
                     <div className="form-floating">

@@ -3,13 +3,13 @@ import React from "react";
 class Hello extends React.Component {
     componentWillMount() {
         setTimeout(()=>
-        { alert('Hello moi nguoi !')}, 1000
+        { alert('The component is going to be unmounted')}, 1000
         )
        
     }
     render() {
         return (
-            <h1>Hello Word!</h1>
+            <h1>Hello World !!!</h1>
         )
 
     }

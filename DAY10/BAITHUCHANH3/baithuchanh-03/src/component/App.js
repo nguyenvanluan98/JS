@@ -20,9 +20,7 @@ class App extends React.Component {
     }
 
     hadleReset = () => {
-        let setState=
         this.setState(this.value);
-        console.log(setState);
     }
     render() {
         let comp;
@@ -36,7 +34,7 @@ class App extends React.Component {
                 <button onClick={this.delete}>Delete Component</button>
                 <hr />
                 <form onSubmit={this.hadleReset}>
-                    <input type="text" value={this.state.value} onChange={this.handleChange} />
+                    {/* <input type="text" value={this.state.value} onChange={this.handleChange} /> */}
                     <button type="submit" value="submit" >Reset Component</button>
                 </form>
 

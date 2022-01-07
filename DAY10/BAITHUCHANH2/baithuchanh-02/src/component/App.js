@@ -5,14 +5,14 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            color: [],
+            color: "blue",
             quotes: ["red", "yellow", "blue", "green", "purple", "pink"]
         };
     }
     componentDidMount() {
-        setTimeout(() => {
-            this.setState(this.handleColor());
-        }, 50);
+        setInterval(() => {
+            this.setState({color:'red'});
+        }, 5000);
 
 
     }
